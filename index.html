@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="Genshin.img/Logo GI.jpg"
+      type="image/x-icon"
+    />
+    <title>Genshin Impact - Nơi lưu giữ hồi ức</title>
+
+    <!-- Link FontAwesome để dùng các Icon (Nhạc, Video, Play, Pause...) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Link file CSS (Sẽ chèn vào ở bước sau) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==========================================
+         1. THANH NAVIGATION (THANH ĐIỀU HƯỚNG)
+    =========================================== -->
+    <header class="navbar-header">
+      <div class="nav-container">
+        <!-- Logo Trang Web -->
+        <a href="./BTN.html" class="logo">
+          <!-- 📌 [GHI CHÚ SINH VIÊN]: Thay link ảnh logo nếu muốn -->
+          <img src="./Genshin.img/no-bg.png" alt="Genshin Impact Logo" />
+        </a>
+
+        <!-- Menu Chính phần này sẽ thêm các link sau này làm tiếp-->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="./BTN.html" class="active">Trang Chủ</a></li>
+            <li><a href="#news">Tin Tức</a></li>
+            <li><a href="#characters">Nhân Vật</a></li>
+            <li><a href="#music">Âm Nhạc</a></li>
+            <li><a href="#videos">Video</a></li>
+            <li>
+              <a href="https://sdk.hoyoverse.com/payment/genshin/vi/index.html"
+                >Trung Tâm Nạp</a
+              >
+            </li>
+            <li><a href="https://genshin.hoyoverse.com/vi/gift">Mã Quà</a></li>
+          </ul>
+        </nav>
+
+        <!-- Lối tắt nhanh Media (Thay thế cho cụm Tải Game & QR Code) -->
+       <!-- Lối tắt Media (Video & Music Menu) -->
+<div class="header-media-actions">
+    <a href="#videos" class="btn-media btn-video"><i class="fa-solid fa-play"></i> Video</a>
+    
+    <!-- 🔴 KHUNG CHỨA NÚT MUSIC & DANH SÁCH BÀI HÁT -->
+    <div class="music-dropdown-wrapper">
+        <button class="btn-media btn-music" id="musicMenuBtn">
+            <i class="fa-solid fa-music"></i> Music <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <!-- Bảng danh sách bài hát xổ xuống -->
+        <div class="music-playlist-dropdown" id="musicDropdown">
+            <div class="playlist-header">
+                <i class="fa-solid fa-list-ul"></i> DANH SÁCH BÀI HÁT
+            </div>
+            <ul class="playlist-items">
+                <!-- 📌 [GHI CHÚ SINH VIÊN]: Điền đường dẫn file mp3, tên bài và nghệ sĩ vào các data-* -->
+                <li class="playlist-item active" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Dzwony Na Nieszpory.mp3" 
+                    data-title="Dzwony Na Nieszpory - Genshin Impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Dzwony Na Nieszpory</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Say My Name.mp3" 
+                    data-title="Say My Name - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Say My Name</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/O Strings, My Strings.mp3" 
+                    data-title="O Strings, My Strings - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">O Strings, My Strings</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Immaculate-Yearning_009_128k.mp3" 
+                    data-title="Immaculate Yearning - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Immaculate Yearning</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Many-Fallen-Dreams_009_128k.mp3" 
+                    data-title="Many Fallen Dreams - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Many Fallen Dreams</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+<li class="playlist-item" 
+                    data-src="Genshin.audio/Sorush-s-Purity_009_128k.mp3" 
+                    data-title="Sorush's Purity - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Sorush's Purity</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Newborn-Life_009_128k.mp3" 
+                    data-title="Dirge of Newborn Life - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Dirge of Newborn Life</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+                <li class="playlist-item" 
+                    data-src="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.audio/Maidens-of-Sanctity_009_128k.mp3" 
+                    data-title="Maidens of Sanctity - Genshin impact" 
+                    data-artist="HOYO-MiX">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div class="song-info">
+                        <span class="song-title">Maidens of Sanctity</span>
+                        <span class="song-artist">HOYO-MiX</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </header>
+
+    <!-- ==========================================
+         2. BANNER CHÍNH (HERO SECTION)
+    =========================================== -->
+    <section id="home" class="hero-section">
+      <!-- 📌 [GHI CHÚ SINH VIÊN]: Có thể thay ảnh nền Hero bằng ảnh khác -->
+      <div
+        class="hero-bg"
+        style="background-image: url(./Genshin.img/backgound\ 2.jpg)"
+      ></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">PHƯU LƯU VÀO THẾ GIỚI THẦN KỲ</h1>
+        <p class="hero-subtitle">Nơi lưu giữ những hồi ức</p>
+
+        <div class="hero-buttons">
+          <a href="#news" class="btn-primary">Xem Tin Mới Nhất</a>
+          <a href="#nations" class="btn-secondary">Khám Phá Quốc Gia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. KHU VỰC TIN TỨC (NEWS SECTION)
+    =========================================== -->
+    <section id="news" class="news-section">
+      <div class="section-title">
+        <h2>TIN TỨC MỚI NHẤT</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="news-container">
+        <!-- Cột Trái: Bài tin nổi bật được chọn -->
+        <div class="news-featured" id="news-featured-box">
+          <!-- 📌 [GHI CHÚ SINH VIÊN]: Ảnh & Nội dung bài tin đang hiển thị mặc định -->
+          <div class="featured-img-wrapper">
+            <img
+              id="featured-img"
+              src="./Genshin.img/Vesna.jpg"
+              alt="Tin nổi bật"
+            />
+            <span class="news-tag" id="featured-tag">Sự Kiện</span>
+          </div>
+          <div class="featured-info">
+            <span class="news-date" id="featured-date">24/09/2026</span>
+            <h3 id="featured-title">
+              Sự Kiện Đã Mở: Nhiệm Vụ Tuần Tra Của Vesna
+            </h3>
+            <p id="featured-desc">
+              Tham gia sự kiện mới để nhận ngay Nguyên Thạch, Sách Kinh Nghiệm
+              và nhiều phần quà hấp dẫn khác trong phiên bản cập nhật mới
+              nhất...
+            </p>
+          </div>
+        </div>
+
+        <!-- Cột Phải: Danh sách các bài tin (Click để đổi tin bên trái) -->
+        <div class="news-list">
+          <div
+            class="news-item active"
+            data-img="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.img/Vesna.jpg"
+            data-tag="Sự Kiện"
+            data-date="24/09/2026"
+            data-title="Sự Kiện Đã Mở: Nhiệm Vụ Tuần Tra Của Vesna"
+            data-desc="Tham gia sự kiện mới để nhận ngay Nguyên Thạch, Sách Kinh Nghiệm và nhiều phần quà hấp dẫn khác trong phiên bản cập nhật mới nhất..."
+          >
+            <span class="item-category">[Sự Kiện]</span>
+            <p class="item-title">Sự Kiện Đã Mở: Nhiệm Vụ Tuần Tra Của Vesna</p>
+            <span class="item-date">24/09/2026</span>
+          </div>
+
+          <div
+            class="news-item"
+            data-img="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.img/backgound 2.jpg"
+            data-tag="Thông Báo"
+            data-date="23/09/2026"
+            data-title="Giới Thiệu Cập Nhật Phiên Bản Mới Khúc An Hồn Cõi Âm"
+            data-desc="Tổng hợp chi tiết các nội dung cập nhật, tối ưu hóa hệ thống và nhân vật mới xuất hiện trong phiên bản này..."
+          >
+            <span class="item-category">[Thông Báo]</span>
+            <p class="item-title">
+              Giới Thiệu Cập Nhật Phiên Bản Mới "Khúc An Hồn Cõi Âm"
+            </p>
+            <span class="item-date">23/09/2026</span>
+          </div>
+
+          <div
+            class="news-item"
+            data-img="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.img/Vodyanitsa.jpg"
+            data-tag="Nhân Vật"
+            data-date="22/09/2026"
+            data-title="[Genshin Impact] Giới Thiệu Nhân Vật - Vodyanitsa"
+            data-desc="Cùng tìm hiểu về bộ kỹ năng, câu chuyện background và phong cách chiến đấu của nhân vật mới Vodyanitsa..."
+          >
+            <span class="item-category">[Nhân Vật]</span>
+            <p class="item-title">
+              [Genshin Impact] Giới Thiệu Nhân Vật - Vodyanitsa
+            </p>
+            <span class="item-date">22/09/2026</span>
+          </div>
+
+          <div
+            class="news-item"
+            data-img="D:/Phát triển ứng dụng web trong marketing/Bài tập nhóm/Genshin.img/Sự kiện 2.jpg"
+            data-tag="Sự Kiện"
+            data-date="21/09/2026"
+            data-title="Bản Tin Sự Kiện Phiên Bản 'Khúc An Hồn Cõi Âm' - Kỳ 1"
+            data-desc="Lịch trình diễn ra các chuỗi sự kiện nhận thưởng trong suốt giai đoạn nửa đầu phiên bản..."
+          >
+            <span class="item-category">[Sự Kiện]</span>
+            <p class="item-title">Bản Tin Sự Kiện Phiên Bản - Kỳ 1</p>
+            <span class="item-date">21/09/2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-tabs">
+        <button class="tab-btn active" data-category="all">Mới</button>
+        <button class="tab-btn" data-category="Sự Kiện">Sự Kiện</button>
+        <button class="tab-btn" data-category="Thông Báo">Thông Báo</button>
+        <button class="tab-btn" data-category="Nhân Vật">Nhân Vật</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. KHU VỰC QUỐC GIA (NATIONS GRID - SÁNG TẠO)
+    =========================================== -->
+    <section id="nations" class="nations-section">
+      <div class="section-title">
+        <h2>CÁC QUỐC GIA TEYVAT</h2>
+        <p class="section-subtext">
+          Nhấp vào quốc gia để khám phá bối cảnh và nhân vật đại diện
+        </p>
+        <div class="title-line"></div>
+      </div>
+
+      <!-- Hiển thị kiểu Thẻ Lưới Grid thay vì Banner Dọc kéo dài -->
+      <div class="nations-grid">
+        <!-- Mondstadt -->
+        <div class="nation-card" data-element="anemo">
+          <!-- 📌 [GHI CHÚ SINH VIÊN]: Link ảnh đại diện từng quốc gia -->
+          <img src="/Genshin.img/mondstadt.jpg" alt="Mondstadt" />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-wind"></i> Phong</span
+            >
+            <h3>Mondstadt</h3>
+            <p>Thành Phố Của Tự Do & Bài Ca Phong Thần</p>
+          </div>
+        </div>
+
+        <!-- Liyue -->
+        <div class="nation-card" data-element="geo">
+          <img
+            src="https://fastcdn.hoyoverse.com/mihoyogame/genshin/2020/09/20/1917fbf752e5052ad4dd3a8be7aa2b4b_6822240974641662921.jpg"
+            alt="Liyue"
+          />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-mountain"></i> Nham</span
+            >
+            <h3>Liyue</h3>
+            <p>Cảng Biển Của Hợp Đồng & Nham Thần</p>
+          </div>
+        </div>
+
+        <!-- Inazuma -->
+        <div class="nation-card" data-element="electro">
+          <img
+            src="https://fastcdn.hoyoverse.com/mihoyogame/genshin/2021/07/15/8e4df1be9bd18bf7594faad05187707e_7979603091932970591.jpg"
+            alt="Inazuma"
+          />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-bolt"></i> Lôi</span
+            >
+            <h3>Inazuma</h3>
+            <p>Quần Đảo Của Vĩnh Hằng & Lôi Thần</p>
+          </div>
+        </div>
+
+        <!-- Sumeru -->
+        <div class="nation-card" data-element="dendro">
+          <img
+            src="https://fastcdn.hoyoverse.com/mihoyogame/genshin/2022/08/13/4dc0bc19e3ef4db7a92289c890732df3_7497171485641753995.jpg"
+            alt="Sumeru"
+          />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-leaf"></i> Thảo</span
+            >
+            <h3>Sumeru</h3>
+            <p>Giáo Viện Của Tri Thức & Thảo Thần</p>
+          </div>
+        </div>
+
+        <!-- Fontaine -->
+        <div class="nation-card" data-element="hydro">
+          <img
+            src="https://fastcdn.hoyoverse.com/mihoyogame/genshin/2023/08/08/dcfa8540c94628dcf96b49ef43c16ee0_1567156947604314486.jpg"
+            alt="Fontaine"
+          />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-droplet"></i> Thủy</span
+            >
+            <h3>Fontaine</h3>
+            <p>Kinh Đô Của Công Lý & Thủy Thần</p>
+          </div>
+        </div>
+
+        <!-- Natlan -->
+        <div class="nation-card" data-element="pyro">
+          <img
+            src="https://fastcdn.hoyoverse.com/mihoyogame/genshin/2024/08/20/0c4eb89e691ec559dc159fa6e54e4c34_1745484856616086208.jpg"
+            alt="Natlan"
+          />
+          <div class="nation-info">
+            <span class="element-icon"
+              ><i class="fa-solid fa-fire"></i> Hỏa</span
+            >
+            <h3>Natlan</h3>
+            <p>Thánh Địa Của Hỏa Chiến & Hỏa Thần</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. KHU VỰC VIDEO GIẢI TRÍ (VIDEO SECTION)
+    =========================================== -->
+    <section id="videos" class="videos-section">
+      <div class="section-title">
+        <h2>THƯ VIỆN VIDEO & TRAILER</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="video-grid">
+        <!-- 📌 [GHI CHÚ SINH VIÊN]: Thay ID video Youtube tại src="https://www.youtube.com/embed/..." -->
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/TAlKhARUcoY"
+              title="Genshin Impact Trailer"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>Trailer Phiên Bản Mới</h4>
+        </div>
+
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/SO__VX4i2iE"
+              title="Character Demo"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>Giới Thiệu Nhân Vật Mới</h4>
+        </div>
+
+        <div class="video-card">
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/C_duDk5e8yU"
+              title="OST Music Video"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>Âm Nhạc Lục Địa Teyvat</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. KHU VỰC MÃ QUÀ & TRUNG TÂM NẠP
+    =========================================== -->
+    <section id="codes" class="codes-section">
+      <div class="section-title">
+        <h2>MÃ QUÀ NGUYÊN THẠCH (GIFTCODE)</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="codes-container">
+        <div class="code-card">
+          <div class="code-text">GENSHINGIFT</div>
+          <div class="code-reward">
+            50 Nguyên Thạch + 3 Kinh Nghiệm Anh Hùng
+          </div>
+          <button class="btn-copy">Sao Chép</button>
+        </div>
+
+        <div class="code-card">
+          <div class="code-text">TEYVAT2026NEWS</div>
+          <div class="code-reward">100 Nguyên Thạch + 50,000 Mora</div>
+          <button class="btn-copy">Sao Chép</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. TRÌNH PHÁT NHẠC CỐ ĐỊNH (FLOATING AUDIO PLAYER)
+    =========================================== -->
+    <div class="floating-audio-player" id="audioPlayerContainer">
+      <!-- 📌 [GHI CHÚ SINH VIÊN]: Đổi đường dẫn bài hát MP3 bạn thích ở thẻ <audio> -->
+      <audio
+        id="bgMusic"
+        loop
+        src="./Genshin.audio/Dzwony Na Nieszpory.mp3"
+      ></audio>
+
+      <div class="player-icon" id="playerToggleBtn">
+        <i class="fa-solid fa-music"></i>
+      </div>
+
+      <div class="player-controls">
+        <div class="track-info">
+          <span class="track-title"> Dzwony Na Nieszpory - Genshin Impact</span>
+          <span class="track-artist">HOYO-MiX</span>
+        </div>
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         8. FOOTER & THÔNG TIN BÀI TẬP NHÓM
+    =========================================== -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>GENSHIN IMPACT FANPAGE</h3>
+          <p>Website Đồ Án Môn Thiết Kế Web - Dành Cho Mục Địch Học Tập</p>
+        </div>
+
+        <!-- 📌 [GHI CHÚ SINH VIÊN]: Điền thông tin các thành viên trong nhóm của bạn -->
+        <div class="student-info-box">
+          <h4>THÔNG TIN NHÓM SINH VIÊN THỰC HIỆN:</h4>
+          <ul>
+            <li><strong>Môn học:</strong> Thiết Kế Web</li>
+            <li>
+              <strong>Thành viên 1:</strong> Nguyễn Văn A - MSSV: 12345678
+            </li>
+            <li><strong>Thành viên 2:</strong> Trần Thị B - MSSV: 87654321</li>
+            <li><strong>Thành viên 3:</strong> Lê Văn C - MSSV: 11223344</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Genshin Impact Fan Project. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Link file JS (Sẽ thêm vào ở các bước sau) -->
+    <script src="script.js"></script>
+  </body>
+</html>
